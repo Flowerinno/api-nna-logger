@@ -1,6 +1,5 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
-import { LoggerRequest } from './types/request';
 import { LoggerDto } from './dtos';
 
 @Controller()
@@ -13,7 +12,7 @@ export class AppController {
   }
 
   @Post('exception')
-  async exception(@Body() body: LoggerRequest) {
+  async exception(@Body() body: LoggerDto) {
     return await this.appService.exception(body);
   }
 
