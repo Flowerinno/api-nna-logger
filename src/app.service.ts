@@ -17,7 +17,12 @@ export class AppService {
     const { api_key, logger_name, message, level } = body;
 
     try {
-      const result = await this.logger.log(api_key, logger_name, message, level);
+      const result = await this.logger.log(
+        api_key,
+        logger_name,
+        message,
+        level,
+      );
 
       return result;
     } catch (error: unknown) {
@@ -33,7 +38,12 @@ export class AppService {
     const { api_key, logger_name, message, level } = body as LoggerRequest;
 
     try {
-      const result = await this.logger.log(api_key, logger_name, message, level);
+      const result = await this.logger.log(
+        api_key,
+        logger_name,
+        message,
+        level,
+      );
 
       return result;
     } catch (error: unknown) {

@@ -1,14 +1,14 @@
 export interface ConnectionRequest {
-	apiKey: string;
+  apiKey: string;
 }
 
 export interface LoggerRequest {
-	api_key: string;
-	logger_name: string;
-	message: string;
-	level: string;
+  api_key: string;
+  logger_name: string;
+  message: string;
+  level: string;
 }
 
 export interface LogsRequest {
-	userId: string;
+  userId: string;
 }
