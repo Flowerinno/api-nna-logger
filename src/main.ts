@@ -10,8 +10,8 @@ async function bootstrap() {
 
   app.use(bodyParser.json({ limit: '50mb' }));
 
-  await app.listen(process.env.PORT ?? 8090, () => {
-    console.log(`URL: http://localhost:${process.env.PORT}/api/health-check`);
+  await app.listen(8090, () => {
+    console.log(`URL: http://localhost:${8090}/api/health-check`);
   });
 }
 bootstrap();
